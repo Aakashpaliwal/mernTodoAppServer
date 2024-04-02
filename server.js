@@ -12,11 +12,7 @@ dotenv.config();
 
 app.use(express.json());
 app.use(
-  cors({
-    origin: "http://localhost:5173",
-    methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  })
+  cors()
 );
 app.get("/", (req, res) => res.send("Hello world!"));
 
