@@ -4,7 +4,7 @@ import { addTodoItem, deleteTodoItem, getAllTodoItems, updateTodoItem } from "..
 const router = express.Router();
 
 router.post("/addtodo", addTodoItem);
-router.get("/viewalltodoitem", getAllTodoItems);
+router.get("/viewalltodoitem/:id", getAllTodoItems);
 router.delete("/deleteTodoItem/:id", deleteTodoItem);
 router.put("/edittodo", updateTodoItem);
 
